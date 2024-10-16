@@ -17,6 +17,7 @@ class OccupantTest {
      * The unit under test.
      */
     private Unit unit;
+    private Square target;
 
     /**
      * Resets the unit under test.
@@ -25,13 +26,15 @@ class OccupantTest {
     void setUp() {
         unit = new BasicUnit();
     }
+    // La méthode qui doit être réalisée avant chaque test
 
     /**
      * Asserts that a unit has no square to start with.
      */
     @Test
     void noStartSquare() {
-        // TODO
+        boolean square_start = unit.hasSquare();
+        assertThat(square_start).isEqualTo(false);
     }
 
     /**
@@ -40,7 +43,12 @@ class OccupantTest {
      */
     @Test
     void testOccupy() {
-        // TODO
+        target = new BasicSquare();
+        assertThat(target.isAccessibleTo(unit)).isTrue();
+        // On bouge
+        unit.occupy(target);
+        // Vérifie que le square de unit est bien target
+        assertThat(unit.getSquare()).isEqualTo(target);
     }
 
     /**
@@ -49,6 +57,16 @@ class OccupantTest {
      */
     @Test
     void testReoccupy() {
-        // TODO
+        target = new BasicSquare();
+        // On va une première fois sur le square
+        unit.occupy(target);
+        // On quitte le square
+        unit.leaveSquare();
+        // On va une deuxième fois sur le square
+        unit.occupy(target);
+        // Assertions
+        assertThat(unit.getSquare()).isEqualTo(target);
+
+
     }
 }
