@@ -15,7 +15,7 @@ public class ClydeTest {
 
     // Création clyde.
     private GhostFactory clyde;
-    // Créer le level
+    // Créer le level.
     private LevelFactory level;
     // Création map
     private List<String> map;
