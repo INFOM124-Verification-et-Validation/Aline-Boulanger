@@ -22,7 +22,7 @@ public class ClydeTest {
     private GhostMapParser mapGhots;
     // On peut def la direction vers laquelle regarde PACMAN
     private PacManSprites pacManDirection;
-    // Création d'un board
+    // Création d'un board.
     private BoardFactory board;
 
 
