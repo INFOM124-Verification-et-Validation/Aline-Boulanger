@@ -20,7 +20,7 @@ public class ImageSprite implements Sprite {
     private final Image image;
 
     /**
-     * Creates a new sprite from an image.
+     * Creates a new sprite from an image
      *
      * @param img
      *            The image to create a sprite from.

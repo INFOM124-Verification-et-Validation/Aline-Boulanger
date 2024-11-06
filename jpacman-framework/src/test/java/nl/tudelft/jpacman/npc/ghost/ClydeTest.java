@@ -13,10 +13,9 @@ import java.util.*;
 
 public class ClydeTest {
 
-    @BeforeEach
-    // Création clyde
+    // Création clyde.
     private GhostFactory clyde;
-    // Créer le level
+    // Créer le level.
     private LevelFactory level;
     // Création map
     private List<String> map;
@@ -34,6 +33,7 @@ public class ClydeTest {
 
 
     }
+}
 
 // variable à tester
 // On peut def la direction vers laquelle regarde Clyde
